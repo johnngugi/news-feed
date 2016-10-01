@@ -1,0 +1,17 @@
+
+body {
+	background: #fafafa;
+}
+nav {
+	background-color: #303030;
+}
+.row {
+	margin: 5% 2%;
+}
+p {
+	color: #333333;
+}
+hr {
+	margin-bottom: 2%;
+}
+

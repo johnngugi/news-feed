@@ -24,6 +24,7 @@ def home():
     articles = get_news(publication)
     city = get_value_with_fallback('city')
     weather = get_weather(city)
+    print articles
     response = make_response(render_template('index.html', articles=articles, weather=weather))
     expires = datetime.datetime.now() + datetime.timedelta(days=365)
     response.set_cookie('publication', publication, expires=expires)
