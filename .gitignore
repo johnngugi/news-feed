@@ -2,3 +2,4 @@
 /venv/
 .idea
 /keys.py
+*.pyc
