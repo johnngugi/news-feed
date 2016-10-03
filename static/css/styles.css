@@ -15,3 +15,25 @@ hr {
 	margin-bottom: 2%;
 }
 
+.headlines {
+	margin-top: 10%; 
+}
+
+/*City*/
+
+.city {
+	margin-top: 2%;
+}
+
+/*weather*/
+
+.weather {
+	text-align: center;
+}
+.weather p {
+	font-size: 1.2em;
+}
+.weather span {
+	font-size: 1.5em;
+	margin-right: 2%; 
+}

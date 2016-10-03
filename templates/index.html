@@ -1,25 +1,41 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="row">
-        <div class="col s12">
-            <h1>Headlines</h1>
-            <h2>Current weather</h2>
+        <div class="col s12 l6 city">
             <form class="col s6">
-                <input type="text" name="city" placeholder="weather search">
-                <input type="submit" value="Submit">
+                <div class="input-field">
+                    <input id="city" type="text" name="city">
+                    <label for="city">City</label>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit">Submit
+                <i class="material-icons right">send</i>
+                </button>
             </form>
         </div>
-        <div class="col s12">
-            <p>City: <b>{{weather.city}}, {{weather.country}}</b></p>
-            <p>{{weather.description}} |{{weather.temperature}}&#8451;</p>
-            <h2>Headlines</h2>
-            <form class="col s6">
-                <input type="text" name="publication" placeholder="search" />
-                <input type="submit" value="Submit" />
-            </form>
+        <div class="col s12 l6 weather">
+            <h2>Current weather</h2>
+            <p class="flow-text"><span>City: </span><b>{{weather.city}}, {{weather.country}}</b></p>
+            <p><i>{{weather.description}} |{{weather.temperature}}&#8451;</i></p>
         </div>
     </div>
+    <div class="row headlines">
+        <form class="col s6" method="get">
+            <div class="input-field">
+                <select name="publication" id="publication">
+                    <option value="" disabled selected>Choose the Publication</option>
+                    <option value="nation">Nation</option>
+                    <option value="cnn">CNN</option>
+                    <option value="bbc">BBC</option>
+                </select>
+                <label for="publication"></label>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit">Submit
+            <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
     <div class="row">
+        <h1>Headlines</h1>
         <div class="col s12">
             {% for article in articles %}
                 <div class="card-panel grey lighten-3 hoverable">
