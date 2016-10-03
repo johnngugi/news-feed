@@ -1,6 +1,6 @@
 import datetime
 import feedparser
-from flask import Flask, render_template, request, make_response,redirect
+from flask import Flask, render_template, request, make_response, redirect
 import json
 from keys import WEATHER_URL
 import urllib2
@@ -12,7 +12,9 @@ app = Flask(__name__)
 RSS_FEEDS = {
     'bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
     'cnn': 'http://rss.cnn.com/rss/edition.rss',
-    'nation': 'http://www.nation.co.ke/latestrss.rss'
+    'nation': 'http://www.nation.co.ke/latestrss.rss',
+    'standard': 'http://www.standardmedia.co.ke/rss/headlines.php',
+    'foxnews': 'http://feeds.foxnews.com/foxnews/latest'
 }
 
 # default publication and city
