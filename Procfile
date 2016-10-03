@@ -1,1 +1,1 @@
-web: python headlines.py
+web: gunicorn run:headlines --log-file -
