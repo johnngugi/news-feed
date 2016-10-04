@@ -15,8 +15,9 @@ hr {
 	margin-bottom: 2%;
 }
 
-.headlines {
-	margin-top: 10%; 
+.headlines h1 {
+	text-align: center;
+	margin: 10% auto;
 }
 
 /*City*/
@@ -29,11 +30,16 @@ hr {
 
 .weather {
 	text-align: center;
+	padding-left: 5%;
 }
-.weather p {
-	font-size: 1.2em;
+.weather h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.weather p{
+	font-size: 1em;
 }
 .weather span {
-	font-size: 1.5em;
+	font-size: 1.3em;
 	margin-right: 2%; 
 }

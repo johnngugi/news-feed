@@ -17,8 +17,6 @@
             <p class="flow-text"><span>City: </span><b>{{weather.city}}, {{weather.country}}</b></p>
             <p><i>{{weather.description}} |{{weather.temperature}}&#8451;</i></p>
         </div>
-    </div>
-    <div class="row headlines">
         <form class="col s6" method="get">
             <div class="input-field">
                 <select name="publication" id="publication">
@@ -36,7 +34,7 @@
             </button>
         </form>
     </div>
-    <div class="row">
+    <div class="row headlines">
         <h1>Headlines</h1>
         <div class="col s12">
             {% for article in articles %}
