@@ -43,6 +43,7 @@ def get_news(query):
     else:
         publication = query.lower()
     feed = feedparser.parse(RSS_FEEDS[publication])
+    print feed
     return feed['entries']
 
 
