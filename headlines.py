@@ -78,6 +78,8 @@ def get_value_with_fallback(key):
         return request.cookies.get(key)
     return DEFAULTS[key]
 
+x = feedparser.parse(RSS_FEEDS['bbc'])
+print x
 
 if __name__ == '__main__':
     app.run(debug=True)

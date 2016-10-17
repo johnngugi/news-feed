@@ -34,13 +34,13 @@
     <div class="row headlines">
         <h1>Headlines</h1>
         {% for article in articles %}
-                <div class="tiles col s6">
-                    <div class="card">
+                <div class="tiles col s4">
+                    <div class="card large">
                         <div class="card-image">
                             <img src="{{ article.image }}">
-                            <span class="card-title deep-purple darken-4">{{ article.title }}</span>
                         </div>
                         <div class="card-content">
+                            <span id="titles" class="deep-purple darken-4 white-text">{{ article.title }}</span>
                             <p>{{ article.summary }}</p>
                         </div>
                         <div class="card-action">
