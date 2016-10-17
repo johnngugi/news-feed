@@ -29,6 +29,14 @@ def home():
     articles = get_news(publication)
     city = get_value_with_fallback('city')
     weather = get_weather(city)
+
+    for i in range(len(articles)):
+        a = articles[i].get('media_content') or articles[i].get('media_thumbnail')
+        if a is None:
+            continue
+        else:
+            articles[i]['image'] = a[0]['url']
+
     response = make_response(render_template('index.html', articles=articles, weather=weather))
     expires = datetime.datetime.now() + datetime.timedelta(days=365)
     response.set_cookie('publication', publication, expires=expires)
@@ -43,7 +51,6 @@ def get_news(query):
     else:
         publication = query.lower()
     feed = feedparser.parse(RSS_FEEDS[publication])
-    print feed
     return feed['entries']
 
 

@@ -36,27 +36,27 @@
     </div>
     <div class="row headlines">
         <h1>Headlines</h1>
+        <div class="col s12">
             {% for article in articles %}
             <div class="row">
-                <div class="col s3"></div>
-                <div class="col s7">
-                    <div class="card">
+                <div class="col s12 m7">
+                    <div class="card large">
                         <div class="card-image">
-                            <img src="{{article.media_thumbnail[0].url}}">
-                            <span class="card-title deep-purple darken-4-text">{{ article.title }}</span>
+                            <img src="{{ article.image }}">
+                            <span class="card-title">{{ article.title }}</span>
                         </div>
-                        <div class="card-content flow-text">
+                        <div class="card-content">
                             <p>{{ article.summary }}</p>
                         </div>
                         <div class="card-action">
-                            <a href="{{ article.link }}" class="purple-text">Link</a>
-                            <span>{{article.published}}</span>
+                            <a href="{{ article.link }}">Link</a>
+                            <span></span>
                         </div>
                     </div>
                 </div>
-                <div class="col s2"></div>
-                </div>
-        </div>
+            </div>
                 <hr />
             {% endfor %}
+        </div>
+    </div>
 {% endblock %}
