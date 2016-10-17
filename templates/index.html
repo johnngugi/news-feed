@@ -21,11 +21,8 @@
             <div class="input-field">
                 <select name="publication" id="publication">
                     <option value="" disabled selected>Choose the Publication</option>
-                    <option value="nation">Nation</option>
                     <option value="cnn">CNN</option>
                     <option value="bbc">BBC</option>
-                    <option value="standard">The Standard</option>
-                    <option value="foxnews">Fox News</option>
                 </select>
                 <label for="publication"></label>
             </div>
@@ -36,27 +33,27 @@
     </div>
     <div class="row headlines">
         <h1>Headlines</h1>
-        <div class="col s12">
             {% for article in articles %}
-            <div class="row">
-                <div class="col s12 m7">
-                    <div class="card large">
+        <div class="row">
+        <div class="col s3"></div>
+                <div class="col s7">
+                    <div class="card">
                         <div class="card-image">
                             <img src="{{ article.image }}">
-                            <span class="card-title">{{ article.title }}</span>
+                            <span class="card-title deep-purple darken-4">{{ article.title }}</span>
                         </div>
                         <div class="card-content">
                             <p>{{ article.summary }}</p>
                         </div>
                         <div class="card-action">
                             <a href="{{ article.link }}">Link</a>
-                            <span></span>
+                            <span>{{ article.published }}</span>
                         </div>
                     </div>
                 </div>
-            </div>
+        <div class="col s2"></div>
+                 </div>
+        </div>
                 <hr />
             {% endfor %}
-        </div>
-    </div>
 {% endblock %}
