@@ -20,7 +20,9 @@ hr {
 	margin: 10% auto;
 }
 
-.card-title {
+.tiles {
+    display: inline-block;
+    margin: 2% auto;
 }
 
 /*City*/
