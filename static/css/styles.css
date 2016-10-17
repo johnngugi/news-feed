@@ -24,6 +24,10 @@ hr {
     display: inline-block;
 }
 
+.titles {
+    font-size: 1.5em;
+}
+
 /*City*/
 
 .city {
